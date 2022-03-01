@@ -24,7 +24,7 @@ engine:                      # Engine settings.
     resign_enabled: true
     resign_score: -1000      # If the score is less than or equal to this value, the bot resigns (in cp).
     resign_moves: 3          # How many moves in a row the score has to be below the resign value.
-    offer_draw_enabled: true
+    offer_draw_enabled: false
     offer_draw_score: 0      # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp).
     offer_draw_moves: 5      # How many moves in a row the absolute value of the score has to be below the draw value.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
@@ -53,8 +53,8 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256  
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 500       # Increase if your bot flags games too often.
-    Threads: 2               # Max CPU threads the engine can use.
+    Move Overhead: 200       # Increase if your bot flags games too often.
+    Threads: 4               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
