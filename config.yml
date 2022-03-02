@@ -21,7 +21,7 @@ engine:                      # Engine settings.
     selection: "best_move"   # Move selection is one of "weighted_random", "uniform_random" or "best_move" (but not below the min_weight in the 2nd and 3rd case).
     max_depth: 8             # Half move max depth.
   draw_or_resign:
-    resign_enabled: true
+    resign_enabled: false
     resign_score: -1000      # If the score is less than or equal to this value, the bot resigns (in cp).
     resign_moves: 3          # How many moves in a row the score has to be below the resign value.
     offer_draw_enabled: false
@@ -53,8 +53,8 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256  
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 200       # Increase if your bot flags games too often.
-    Threads: 4               # Max CPU threads the engine can use.
+    Move Overhead: 500       # Increase if your bot flags games too often.
+    Threads: 2               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
